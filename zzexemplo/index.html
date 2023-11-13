@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <h1>Verificar de idade</h1>
+
+  <div>
+    <p>
+      Ano de nascimento: 
+      <input type="number" name="txtano" id="txtano">
+    </p>
+
+    <p>
+      Sexo:
+      <input type="radio" name="radsex" id="mas" checked>
+      <label for="mas">Masculino</label>
+
+      <input type="radio" name="radsex" id="fem">
+      <label for="fem">Feminino</label>
+    </p>
+
+    <p>
+      <input type="button" value="Verificar" onclick="verificar()">
+    </p>
+
+    <p id="res">Preencha os dados a acima para ver o resultado</p>
+  </div>
+ 
+  <p id="copy">&copy; Guilherme Carvalho</p>
+    
+    <script src="script/script.js"></script>
+</body>
+</html>

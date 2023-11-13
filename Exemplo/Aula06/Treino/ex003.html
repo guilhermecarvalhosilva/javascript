@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+    <style>
+        body{
+            background-color: rgba(118, 118, 198, 0.333);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt('Qual o seu nome?')
+
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras <br>`)
+
+        document.write(`Seu nome em maiúsculo é <strong>${nome.toLocaleUpperCase()}</strong> <br>`)
+
+        document.write(`O seu nome em minusculo é <strong>${nome.toLowerCase()}</strong>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM treino</title>
+    <style>
+        div#area{
+            background-color: green;
+            font-size: 25px;
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 200px;
+            text-align: center;
+            color: white;
+            width: 200px;
+            height: 200px;
+           
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+
+    <script>
+        var area = window.document.getElementById('area')
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('click', clicou)
+        area.addEventListener('mouseout', saiu)
+
+
+        function entrar(){
+            area.innerHTML = 'Entrou!!!'
+            area.style.borderRadius = '0px'
+            
+        }
+
+        function clicou(){
+            area.innerHTML = 'Clicou!!!'
+            area.style.background = 'red'
+            area.style.borderRadius = '10px'
+        }
+
+        function saiu(){
+            area.innerHTML = 'Saiu!!!'
+            area.style.background = 'green'
+            area.style.borderRadius = '0px'
+        }
+    </script>
+</body>
+</html>

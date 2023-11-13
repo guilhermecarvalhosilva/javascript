@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votação</title>
+</head>
+<body>
+    <h1>Checagem de Votação</h1>
+    Digite a sua idade: <input type="number" name="txtvt" id="txtvt">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="resposta"></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas quaerat soluta beatae, aliquam ullam laboriosam ratione enim laudantium accusantium ab provident non quibusdam, quasi animi quidem sapiente alias dicta! Reprehenderit.</p>
+
+
+    <script>
+        function verificar() {
+            var tvt = window.document.getElementById('txtvt')
+            var vt = Number(tvt.value)
+            var res = window.document.getElementById('resposta')
+            res.innerHTML = `Você tem <strong>${vt} anos</strong> <br>`
+            if (vt < 16){
+                res.innerHTML += `<strong>Não vota</strong> <br>`
+            } else {
+                if (vt < 18 || vt > 69){
+                    res.innerHTML += `<strong>Voto opcional</strong> <br>`
+                } else {
+                    res.innerHTML += `<strong>Voto Obrigatorio</strong> <br>`
+                }
+            }
+            res.innerHTML += `Boa votação`
+        }
+    </script>
+</body>
+</html>

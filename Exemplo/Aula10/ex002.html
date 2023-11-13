@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+</head>
+<body>
+    <h1>Somandos numeros</h1>
+        <input type="number" name="txtn1" id="txtn1"> +
+        <input type="number" name="txtn2" id="txtn2"> +
+        <input type="number" name="txtn3" id="txtn3">
+        <input type="button" value="somar" onclick="somar()">
+            <div id="res">Resultado:</div>
+
+        <script>
+            function somar(){
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var tn3 = window.document.getElementById('txtn3')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var n3 = Number(tn3.value)
+            var soma = n1 + n2 + n3 
+            res.innerHTML = `Resultado: a soma entre os numeros ${n1}, ${n2} e ${n3} é igual a ${soma}`
+            }
+
+        </script>
+</body>
+</html>

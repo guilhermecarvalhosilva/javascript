@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="n1">
+    <input type="number" name="" id="n2">
+    <input type="number" name="" id="n3">
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+
+
+
+
+    <script>
+function verificar() {
+    var n1 = Number(document.getElementById(`n1`).value)
+    var n2 = Number(document.getElementById(`n2`).value)
+    var n3 = Number(document.getElementById(`n3`).value)
+    var res = document.getElementById(`res`)
+
+    var n = []
+    n.push(n1)
+    n.push(n2)
+    n.push(n3)
+    n.sort()
+
+    res.innerHTML = ``
+   for(let g = 0; g < n.length; g++) {
+        res.innerHTML += `${n[g]}`
+   }
+}
+         
+        
+    </script>
+</body>
+</html>
+
+
+

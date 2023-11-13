@@ -1,0 +1,44 @@
+@charset 'UTF-8' ;
+
+
+* {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+input {
+    max-width: 150px;
+    text-align: center;
+}
+
+div {
+    background-color: white;
+    max-width: 450px;
+    height: 450px;
+    margin: auto;
+    padding: 5px;
+}
+
+p {
+    padding-top: 20px;
+}
+
+img#foto {
+    max-width: 250px;
+    width: 100%;
+    margin: 10px auto;
+    display: block;
+    border-radius: 15px;
+    border: 2px solid black;
+}
+
+

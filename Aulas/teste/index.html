@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style> 
+        p {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <input type="text" name="" id="teste">
+    <p id="aviso">Digite novamente</p>
+    <input type="button" value="verificar" onclick="verificar()">
+
+    <script>
+
+    var input = document.getElementById(`teste`)
+   var p = document.getElementById(`aviso`)
+
+   function erroValidação() {
+        input.style.border = `2px solid red`
+        p.style.display = `block`
+        p.style.color = `red`
+   }
+
+   function certoValidação() {
+        input.style.border = ``
+        p.style.display = ``
+        p.style.color = ``
+   }
+
+
+
+   
+   function verificar() {
+    if(input.value.length <= 3) {
+       erroValidação()
+       
+
+    } else {
+        certoValidação()
+        alert(`Dados enviados`)
+    }
+
+    input.value = ``
+    input.focus()   
+   }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horas</title>
+</head>
+<body>
+    <h1>Checagem de Horas</h1>
+    Digite que horas são: <input type="number" name="txthr" id="txthr">
+    <input type="button" value="verificar" onclick="verificar()" >
+    <div id="resposta"></div>
+
+
+    <script>
+        function verificar(){
+        var thr = window.document.getElementById('txthr')
+        var hr = Number(thr.value)
+        var res = window.document.getElementById('resposta')
+        res.innerHTML = `São <strong>${hr} horas</strong> <br>`
+        if (hr < 6){
+            res.innerHTML += `<strong>Boa madrugada!</strong> <br>`
+        } else {
+            if (hr < 12){
+                res.innerHTML += `<strong>Bom dia!</strong><br>`
+                
+            } else {
+                if (hr < 19) {
+                    res.innerHTML += `<strong>Boa tarde!</strong><br>`
+                } else{
+                    if (hr < 24) {
+                        res.innerHTML += `<strong>Boa noite!</strong> <br>`
+                    }
+                }
+            }
+        }
+        res.innerHTML += `<strong>Aproveite!!! </strong>`
+    }
+    </script>
+</body>
+</html>

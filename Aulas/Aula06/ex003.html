@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento de dados</title>
+
+    <style>
+        body {
+            font: normal 20pt arial;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <script>
+        var nome = window.prompt('Qual o seu nome ?')
+        document.write(`Olá, <strong>${nome}</strong>. Seu nome tem ${nome.length} letras <br>`)
+        document.write(`Seu nome em maiúsculo é <strong>${nome.toUpperCase()}</strong> <br>`)
+        document.write(`O seu nome em minusculo é <strong>${nome.toLowerCase()}</strong>`)
+
+        //(.length) -> diz quantas letras tem o seu nome
+        //(..toUpperCase()) -> deixa todas as letras maiúscula
+        //(toLowerCase()) -> deixa todas as letras minuscula
+    </script>
+</body>
+</html>

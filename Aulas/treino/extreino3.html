@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa ////////////</title>
+    <style>
+        body{
+            background-color: palevioletred;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20pt;
+        }
+
+        div#quadrado{
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-weight: normal;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25pt;
+        }
+    </style>
+</head>
+<body>
+ <h1>Qual o mês do ano?</h1>
+ O sistema digitara o mês do ano:
+ <input type="button" value="verificar" onclick="verificar()">
+ <div id="resultado"></div>
+
+
+   <script>
+    function verificar() {
+        var agora = new Date()
+        var mes = agora.getMonth()
+        var res = window.document.getElementById('resultado')
+        res.innerHTML = `Estamos no mês de ${mes}`
+
+        switch (mes) {
+            case 0: res.innerHTML += `Janeiro`
+            break
+
+            case 1: res.innerHTML += `Fevereiro`
+            break
+
+            case 2: res.innerHTML += `Março`
+            break
+
+            case 3: res.innerHTML += `Abril`
+            break
+
+            case 4: res.innerHTML += `Maio`
+            break
+
+            case 5: res.innerHTML += `Junho`
+            break
+
+            case 6: res.innerHTML += `Julho`
+            break
+
+            case 7: res.innerHTML += `Agosto`
+            break
+
+            case 8: res.innerHTML += `Setembro`
+            break
+
+            case 9: res.innerHTML += `Outubro`
+            break
+
+            case 10: res.innerHTML += `Nvembro`
+            break
+
+            case 11: res.innerHTML += `Dezembro`
+            break
+
+            default: res.innerHTML += `[ERRO] Dia Invalido!`
+        }
+    }
+   </script>
+</body>
+</html>

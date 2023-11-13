@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ola</title>
+
+    <style>
+        body {
+            background-color: rgb(216, 178, 129);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 15px;
+            color: black;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px 0px;
+        }
+
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2.5em;
+        }
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1.5em;
+        }        
+
+        #img {
+            width:50%;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        div {
+            height: 150px;
+            width: 150px;
+            resize: vertical;
+            border: 1px solid black;
+            overflow: auto;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+
+ <h1>Tabuada</h1>
+
+ <section>
+  <p>
+    Numero:
+    <input type="number" name="" id="txtnum">
+    <input type="button" value="Gerar tabuada" onclick="verificar()">
+  </p>
+
+<div id="res">
+  
+</div>
+ </section>
+
+<script src="ja.js"></script>
+</body>
+</html>

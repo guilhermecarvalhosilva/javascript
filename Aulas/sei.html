@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.835);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          
+        }
+        section {
+            border: 10px solid rgb(0, 149, 255);
+            border-radius: 40px 0px;
+            width: 20%;
+            height: 55vh;
+            margin: 20px auto;
+        }
+
+        div {
+            border-radius: 25px 0px  ;
+            border: 5px solid rgb(0, 149, 255);
+            width: 50%;
+            height: 30%;
+        }
+
+        div > i {
+            color: white; 
+        }
+
+        div:hover {
+            width: 100%;
+            transition: 2s;
+        }
+
+        aside {
+            padding: 10px 0px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px 0px;
+        }
+
+        aside > h3 {
+            font-size: 1.8em;
+        }
+
+        aside > p {
+            text-align: center;
+            font-size: 0.9em;
+            width: 90%;
+        }
+
+        aside > input {
+            width: 50%;
+            padding: 8px 0px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            background-color: rgb(0, 149, 255);
+            color: white;
+            font-size: 1.1em;
+            font-weight: 400;
+        }
+
+        aside > input:hover {
+            width: 60%;
+            transition: 0.8s;
+          
+        }
+
+       
+    </style>
+</head>
+<body>
+    <section>
+        <div>
+            <i class="bi bi-0-circle"></i>
+        </div>
+        <aside>
+            <h3>Color</h3>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt id, ipsum aspernatur facere amet eum enim nemo, accusantium natus dolorem fugit temporibus eaque. Saepe cumque ab eaque possimus, fugit inventore?</p>
+            <input type="button" value="Clicar">
+        </aside>
+    </section>
+</body>
+</html>

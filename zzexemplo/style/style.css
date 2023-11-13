@@ -1,0 +1,46 @@
+@charset 'UTF-8' ;
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(81, 81, 209);
+}
+
+h1 {
+    padding: 20px 0px;
+    color: white;
+    font-size: 2.5em;
+}
+
+div {
+    
+    width: 500px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 0px auto;
+    padding: 20px 0px;
+}
+
+div > p {
+    padding: 10px 0px;
+}
+
+p#copy {
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 15px 0px;
+}
+
+img#foto {
+    margin: 20px auto;
+    display: block;
+    max-width: 200px;
+}
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Snake Game</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <script src="snake_game.js"></script>
+</body>
+
+<script>
+    const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+const blockSize = 20;
+const canvasSize = 400;
+
+let snake = [{ x: 10, y: 10 }];
+let food = { x: 15, y: 10 };
+let dx = 0;
+let dy = 0;
+let score = 0;
+
+function drawSnakePart(snakePart) {
+  ctx.fillStyle = 'green';
+  ctx.fillRect(snakePart.x * blockSize, snakePart.y * blockSize, blockSize, blockSize);
+}
+
+function drawFood() {
+  ctx.fillStyle = 'red';
+  ctx.fillRect(food.x * blockSize, food.y * blockSize, blockSize, blockSize);
+}
+
+function moveSnake() {
+  const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+  snake.unshift(head);
+  if (head.x === food.x && head.y === food.y) {
+    score += 10;
+    generateFood();
+  } else {
+    snake.pop();
+  }
+}
+
+function generateFood() {
+  food.x = Math.floor(Math.random() * (canvasSize / blockSize));
+  food.y = Math.floor(Math.random() * (canvasSize / blockSize));
+}
+
+function handleKeyPress(event) {
+  const keyPressed = event.key;
+  switch (keyPressed) {
+    case 'ArrowUp':
+      dx = 0;
+      dy = -1;
+      break;
+    case 'ArrowDown':
+      dx = 0;
+      dy = 1;
+      break;
+    case 'ArrowLeft':
+      dx = -1;
+      dy = 0;
+      break;
+    case 'ArrowRight':
+      dx = 1;
+      dy = 0;
+      break;
+  }
+}
+
+function drawScore() {
+  ctx.font = '20px Arial';
+  ctx.fillStyle = 'black';
+  ctx.fillText('Score: ' + score, 10, 30);
+}
+
+function clearCanvas() {
+  ctx.clearRect(0, 0, canvasSize, canvasSize);
+}
+
+function checkCollision() {
+  const head = snake[0];
+  if (head.x < 0 || head.y < 0 || head.x >= canvasSize / blockSize || head.y >= canvasSize / blockSize) {
+    clearInterval(gameLoop);
+    alert('Game Over! Your score: ' + score);
+  }
+  for (let i = 1; i < snake.length; i++) {
+    if (head.x === snake[i].x && head.y === snake[i].y) {
+      clearInterval(gameLoop);
+      alert('Game Over! Your score: ' + score);
+    }
+  }
+}
+
+function gameLoop() {
+  clearCanvas();
+  moveSnake();
+  drawFood();
+  snake.forEach(drawSnakePart);
+  drawScore();
+  checkCollision();
+}
+
+document.addEventListener('keydown', handleKeyPress);
+generateFood();
+const gameLoop = setInterval(gameLoop, 100);
+
+</script>
+</html>

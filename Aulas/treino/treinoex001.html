@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        body {
+            background-color: rgb(122, 185, 217);
+            color: white;
+            font-weight: normal;
+            font-size: 18pt;
+            font-family: Arial, Helvetica, sans-serif;
+    
+        }
+
+      
+    </style>
+</head>
+<body>
+<h1>Que dia é hoje?</h1>
+Que dia é: <input type="button" value="verificar" onclick="verificar()">
+<div id="resultado"></div>
+
+    <script>
+   function verificar() {
+        var agora = new Date()
+        var dia = agora.getDay()
+        var res = window.document.getElementById('resultado')
+        
+        switch (dia) {
+            case 0: 
+                res.innerHTML += `Hoje é Domingo! <br>`
+                break
+
+            case 1: 
+                res.innerHTML += `Hoje é segunda <br>`
+                break
+
+            case 2: 
+                res.innerHTML += `Hoje é Terça <br>`
+                break
+
+            case 3: 
+                res.innerHTML += `Hoje é Quarta <br>`
+                break
+
+            case 5: 
+                res.innerHTML += `Hoje é Quinta <br>`
+                break
+
+            case 6: 
+                res.innerHTML += `Hoje é Sexta <br>`
+                break
+
+            case 7: 
+                res.innerHTML += `Hoje é Sabado <br>`
+                break
+
+            default: 
+                res.innerHTML += `[DIA INVALIDO] <br>`
+                break
+        }
+
+        res.innerHTML += `Tenha um bom dia!!`
+        
+}    
+</script>
+</body>
+</html>
+
+
+
+

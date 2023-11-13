@@ -1,0 +1,19 @@
+- O que estudei:
+    1 - Fundamentos
+    2 - Variaveis e Dados
+    3 - Operadores
+    4 - Condições
+    5 - Repetições
+    6 - Arrays
+    7 - Functions
+    8 - DOM
+
+
+- O que precisa estudar:
+    1 - Functions (arrow Functions, callbacks, função anonima , IIFE, Javascript funcional)
+    2 - Objetos
+    3 - Modularização (deixar codigos em arquivos separados e reutilizar codigos)
+    4 - RegEx (Validação de Dados)
+    5 - JSON 
+    6 - Ajax
+    7 - NodeJS (Javascript no lado do servidor)
